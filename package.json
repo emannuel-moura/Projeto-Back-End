@@ -18,3 +18,128 @@
   }
 }
 
+{
+  "id": 1,
+  "firstname": "user firstname",
+  "surname": "user surname",
+  "email": "user@mail.com"
+}
+
+{
+  "message": "User not found"
+}
+
+{
+  "id": 1,
+  "firstname": "user firstname",
+  "surname": "user surname",
+  "email": "user@mail.com"
+}
+
+{
+  "message": "Passwords do not match"
+}
+
+{
+  "message": "Email already in use"
+}
+{
+  "message": "All fields are required"
+}
+{
+  "message": "Authorization token not provided"
+}
+{
+  "message": "Invalid token"
+}
+{
+  "message": "User not found"
+}
+{
+  "message": "Authorization token not provided"
+}
+{
+  "message": "Invalid token"
+}
+{
+  "message": "User not found"
+}
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Shoes",
+      "slug": "shoes",
+      "use_in_menu": true
+    },
+    {
+      "id": 2,
+      "name": "Offers",
+      "slug": "offers",
+      "use_in_menu": true
+    },
+    {
+      "id": 3,
+      "name": "Black Friday",
+      "slug": "black-friday",
+      "use_in_menu": false
+    }
+  ],
+  "total": 10,
+  "limit": -1,
+  "page": 1
+}
+{
+  "message": "Invalid query parameters"
+}
+{
+  "id": 1,
+  "name": "Shoes",
+  "slug": "shoes",
+  "use_in_menu": true
+}
+{
+  "message": "Category not found"
+}
+{
+  "id": 1,
+  "name": "Shoes",
+  "slug": "shoes",
+  "use_in_menu": true,
+  "createdAt": "2024-08-14T10:00:00Z",
+  "updatedAt": "2024-08-14T10:00:00Z"
+}
+{
+  "message": "Name and slug are required"
+}
+{
+  "message": "Category with this slug already exists"
+}
+{
+  "message": "Token not provided"
+}
+{
+  "message": "Invalid token"
+}
+{
+  "message": "Name and slug are required"
+}
+{
+  "message": "Token not provided"
+}
+{
+  "message": "Invalid token"
+}
+{
+  "message": "Category not found"
+}
+
+{
+  "message": "Token not provided"
+}
+{
+  "message": "Invalid token"
+}
+{
+  "message": "Category not found"
+}

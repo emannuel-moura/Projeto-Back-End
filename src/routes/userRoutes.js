@@ -13,3 +13,13 @@ router.get('/profile', authMiddleware, (req, res) => {
 });
 
 module.exports = router;
+const authenticateToken = require('../middleware/authenticateToken');
+
+router.put('/v1/category/:id', authenticateToken, categoryController.updateCategory);
+module.exports = router;
+const authenticateToken = require('../middleware/authenticateToken');
+
+router.post('/v1/category', authenticateToken, categoryController.createCategory);
+const authenticateToken = require('../middleware/authenticateToken');
+
+router.delete('/v1/category/:id', authenticateToken, categoryController.deleteCategory);
