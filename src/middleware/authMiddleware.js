@@ -76,6 +76,22 @@ module.exports = authenticateToken;
 const jwt = require('jsonwebtoken');
 
 const authenticateToken = (req, res, next) => {
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (!token) {
+        return res.status(400).json({ message: 'Token not provided' });
+    }
+
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+        if (err) {
+            return res.status(400).json({ message: 'Invalid token' });
+        }
+
+        req.user = user;
+        next();
+    });
+};
     // Verifica a presença do cabeçalho Authorization
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1]; // Extrai o token após 'Bearer'
@@ -92,6 +108,6 @@ const authenticateToken = (req, res, next) => {
         req.user = user; // Adiciona as informações do usuário ao request
         next();
     });
-};
+
 
 module.exports = authenticateToken;

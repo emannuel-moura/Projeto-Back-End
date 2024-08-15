@@ -164,7 +164,7 @@ module.exports = {
 };
 const Category = require('../models/category');
 
-const createCategory = async (req, res) => {
+const create categoria = async (req, res) => {
     const { name, slug, use_in_menu } = req.body;
 
     // Validação básica dos campos obrigatórios
