@@ -40,3 +40,12 @@ const categoryController = require('../controllers/categoryController');
 router.delete('/v1/category/:id', categoryController.deleteCategory);
 
 module.exports = router;
+
+const express = require('express');
+const router = express.Router();
+const categoryController = require('../controllers/categoryController');
+
+// Rota para cadastrar uma nova categoria
+router.post('/v1/category', categoryController.createCategory);
+
+module.exports = router;

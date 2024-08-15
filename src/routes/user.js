@@ -40,3 +40,16 @@ module.exports = router;
 const authenticateToken = require('../middleware/authenticateToken');
 
 router.post('/v1/category', authenticateToken, categoryController.createCategory);
+
+const express = require('express');
+const router = express.Router();
+const authenticateToken = require('../middleware/authMiddleware');
+const userController = require('../controllers/userController');
+
+// Endpoint para atualizar um usuário (PUT)
+router.put('/:id', authenticateToken, userController.updateUser);
+
+// Endpoint para deletar um usuário (DELETE)
+router.delete('/:id', authenticateToken, userController.deleteUser);
+
+module.exports = router;

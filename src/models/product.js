@@ -47,3 +47,31 @@ const Product = sequelize.define('Product', {
 });
 
 module.exports = Product;
+const Product = sequelize.define('Product', {
+    // Definições das colunas...
+});
+
+// Associações
+Product.belongsToMany(Category, { through: 'ProductCategory', foreignKey: 'product_id' });
+Product.hasMany(ProductImage, { foreignKey: 'product_id' });
+Product.hasMany(ProductOption, { foreignKey: 'product_id' });
+
+module.exports = Product;
+const express = require('express');
+const router = express.Router();
+const productController = require('../controllers/productController');
+
+// Rota para obter informações do produto pelo ID
+router.get('/v1/product/:id', productController.getProductById);
+
+module.exports = router;
+const Product = sequelize.define('Product', {
+    // Definições das colunas...
+});
+
+// Associações
+Product.belongsToMany(Category, { through: 'ProductCategory', foreignKey: 'product_id' });
+Product.hasMany(ProductImage, { foreignKey: 'product_id' });
+Product.hasMany(ProductOption, { foreignKey: 'product_id' });
+
+module.exports = Product;

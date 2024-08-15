@@ -162,3 +162,37 @@ const deleteCategory = async (req, res) => {
 module.exports = {
     deleteCategory,
 };
+const Category = require('../models/category');
+
+const createCategory = async (req, res) => {
+    const { name, slug, use_in_menu } = req.body;
+
+    // Validação básica dos campos obrigatórios
+    if (!name || !slug) {
+        return res.status(400).json({ message: 'Name and slug are required' });
+    }
+
+    try {
+        // Verifica se a categoria com o mesmo slug já existe
+        const existingCategory = await Category.findOne({ where: { slug } });
+        if (existingCategory) {
+            return res.status(400).json({ message: 'Category with this slug already exists' });
+        }
+
+        // Cria a nova categoria
+        const newCategory = await Category.create({
+            name,
+            slug,
+            use_in_menu: use_in_menu !== undefined ? use_in_menu : false,
+        });
+
+        // Retorna a resposta com status 201 e a nova categoria
+        return res.status(201).json(newCategory);
+    } catch (error) {
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+};
+
+module.exports = {
+    createCategory,
+};

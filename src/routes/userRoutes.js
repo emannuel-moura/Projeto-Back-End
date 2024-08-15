@@ -23,3 +23,7 @@ router.post('/v1/category', authenticateToken, categoryController.createCategory
 const authenticateToken = require('../middleware/authenticateToken');
 
 router.delete('/v1/category/:id', authenticateToken, categoryController.deleteCategory);
+
+const authenticateToken = require('../middleware/authenticateToken');
+
+router.post('/v1/category', authenticateToken, categoryController.createCategory);

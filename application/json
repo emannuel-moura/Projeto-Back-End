@@ -1,0 +1,85 @@
+{
+  "enabled": true,
+  "name": "Produto 01",
+  "slug": "produto-01",
+  "stock": 10,
+  "description": "Descrição do produto 01",
+  "price": 119.90,
+  "price_with_discount": 99.90,
+  "category_ids": [1, 15, 24, 68],
+  "images": [ 
+    {
+      "type": "image/png",
+      "content": "base64 da imagem 1" 
+    },
+    {
+      "type": "image/png",
+      "content": "base64 da imagem 2" 
+    },
+    {
+      "type": "image/jpg",
+      "content": "base64 da imagem 3" 
+    }
+  ],
+  "options": [
+    {
+      "title": "Cor",
+      "shape": "square",
+      "radius": "4px",
+      "type": "text",
+      "value": ["PP", "GG", "M"]
+    },
+    {
+      "title": "Tamanho",
+      "shape": "circle",
+      "type": "color",
+      "values": ["#000", "#333"]
+    }
+  ]
+}
+{
+    "enabled": true,
+    "name": "Produto 01 atualizado",
+    "slug": "produto-01-atualizado",
+    "stock": 20,
+    "description": "Descrição do produto 01 atualizado",
+    "price": 49.9,
+    "price_with_discount": 0,
+    "category_ids": [1, 15, 24, 68],
+    "images": [ 
+      {
+        "type": "image/png",
+        "content": "base64 da imagem 1" 
+      },
+      {
+        "id": 2,
+        "deleted": true
+      },
+      {
+        "id": 3,
+        "content": "base64 da imagem 3" 
+      },
+      {
+        "id": 1,
+        "content": "https://store.com/media/product-01/image-01.jpg"
+      }
+    ],
+    "options": [
+      {
+        "id": 1,
+        "deleted": true
+      },
+      {
+        "id": 2,
+        "radius": "10px",
+        "value": ["42/43", "44/45"]
+      },
+      {
+        "title": "Tipo",
+        "shape": "square",
+        "type": "text",
+        "values": ["100% algodão", "65% algodão"]
+      }
+    ]
+  }
+  

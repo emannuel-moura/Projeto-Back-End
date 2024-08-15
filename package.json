@@ -143,3 +143,23 @@
 {
   "message": "Category not found"
 }
+{
+  "id": 1,
+  "name": "Shoes",
+  "slug": "shoes",
+  "use_in_menu": true,
+  "createdAt": "2024-08-14T10:00:00Z",
+  "updatedAt": "2024-08-14T10:00:00Z"
+}
+{
+  "message": "Name and slug are required"
+}
+{
+  "message": "Category with this slug already exists"
+}
+{
+  "message": "Token not provided"
+}
+{
+  "message": "Invalid token"
+}
