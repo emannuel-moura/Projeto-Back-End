@@ -27,7 +27,7 @@ router.put('/v1/user/:id', authMiddleware, userController.updateUser);
 module.exports = router;
 
 const express = require('express');
-const rota = express.Router();
+
 const userController = require('../controllers/userController');
 const authMiddleware = require('../middleware/authMiddleware');
 
@@ -42,7 +42,7 @@ const authenticateToken = require('../middleware/authenticateToken');
 router.post('/v1/category', authenticateToken, categoryController.createCategory);
 
 const express = require('express');
-const rota = express.Router();
+
 const authenticateToken = require('../middleware/authMiddleware');
 const userController = require('../controllers/userController');
 

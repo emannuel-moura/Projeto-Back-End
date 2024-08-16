@@ -47,9 +47,7 @@ const Product = sequelize.define('Product', {
 });
 
 module.exports = Product;
-const Product = sequelize.define('Product', {
-    // Definições das colunas...
-});
+
 
 // Associações
 Product.belongsToMany(Category, { through: 'ProductCategory', foreignKey: 'product_id' });
@@ -65,9 +63,7 @@ const productController = require('../controllers/productController');
 router.get('/v1/product/:id', productController.getProductById);
 
 module.exports = router;
-const Product = sequelize.define('Product', {
-    // Definições das colunas...
-});
+
 
 // Associações
 Product.belongsToMany(Category, { through: 'ProductCategory', foreignKey: 'product_id' });

@@ -51,7 +51,7 @@ router.put('/v1/category/:id', categoryController.updateCategory);
 
 module.exports = router;
 const express = require('express');
-const rotas = express.Router();
+const routes = express.Router();
 const categoryController = require('../controllers/categoryController');
 
 // Rota para deletar uma categoria existente
@@ -60,7 +60,7 @@ router.delete('/v1/category/:id', categoryController.deleteCategory);
 module.exports = router;
 
 const express = require('express');
-const rotas = express.Router();
+
 const categoryController = require('../controllers/categoryController');
 
 // Rota para cadastrar uma nova categoria

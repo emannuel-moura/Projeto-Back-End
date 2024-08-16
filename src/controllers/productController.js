@@ -262,19 +262,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Função para salvar imagens temporariamente
-const saveImage = (base64Data, fileName) => {
-    return new Promise((resolve, reject) => {
-        const buffer = Buffer.from(base64Data, 'base64');
-        const filePath = path.join(__dirname, '../../uploads', fileName);
-        fs.writeFile(filePath, buffer, (err) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(filePath);
-            }
-        });
-    });
-};
+
 
 const updateProduct = async (req, res) => {
     const errors = validationResult(req);

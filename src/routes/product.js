@@ -8,7 +8,7 @@ router.get('/v1/product/search', productController.searchProducts);
 module.exports = router;
 
 const express = require('express');
-const rota = express.Router();
+
 const productController = require('../controllers/productController');
 
 // Rota para criar um novo produto
@@ -17,7 +17,7 @@ router.post('/v1/product', productController.createProduct);
 module.exports = router;
 
 const express = require('express');
-const rota = express.Router();
+
 const productController = require('../controllers/productController');
 
 // Rota para atualizar um produto existente
